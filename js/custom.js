@@ -1,0 +1,13 @@
+$(document).ready(function(){
+    $("#preloder").delay(2000).fadeOut();
+    $(".nav-link").click(
+        function(){
+            $(".offcanvas").addClass("nahid")
+        }
+    );
+    $(".navbar-toggler").click(
+        function(){
+            $(".offcanvas").removeClass("nahid")
+        }
+    )
+});

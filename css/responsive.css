@@ -1,0 +1,44 @@
+@media (max-width:991px){
+    .navbar{
+        position: static;
+    }
+    .navbar .navbar-brand {
+        width: 80px;
+        height: 80px;
+    }
+    .navbar .offcanvas .nav {
+        width: 80px;
+    }
+    .navbar .offcanvas {
+        top: 81px !important;
+        visibility: visible;
+    
+    }
+    .nahid{
+        visibility: hidden !important;
+        transform: translateX(-100%) !important ;
+        transition: all linear 0.4s;
+                
+    }
+    /* =============
+    home-section start
+    ================ */
+    .tab-content {
+        padding-left: 0 !important;
+    }
+    #home .home-imges {
+        
+        top: 22px;
+        width: 200px;
+    }
+    #home .home-imges img {
+        top: 0;
+    }
+    #home .home-text {
+         padding-left: 0px;
+    }
+    #home .home-text h1 {
+        font-size: 48px;
+    }
+    
+}

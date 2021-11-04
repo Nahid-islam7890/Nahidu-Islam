@@ -154,6 +154,7 @@ header-section end
 ================*/
 .tab-content {
   padding-left: 90px !important;
+  height: 100vh;
 }
 
 #home .home-text {

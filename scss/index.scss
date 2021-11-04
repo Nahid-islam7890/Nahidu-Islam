@@ -1,0 +1,275 @@
+/* =========
+common css start
+=============== */
+$co1: #fff;
+$brackgroundColor: #4E8CB1;
+$font: 'Poppins', sans-serif;
+$co2:#495057;
+$font2:'Roboto', sans-serif;
+@mixin trans($time) {
+    transition: all linear $time;
+    -moz-transition: all linear $time;
+    -webkit-transition: all linear $time;
+    -o-transition: all linear $time;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+
+/* =========
+common css ends
+=============== */
+#preloder{
+    height: 100vh;
+    background: $co1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    z-index: 99999;
+    .preloder-content{
+        position: relative;
+        span{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: $brackgroundColor;
+            border-radius: 50%;
+            &:first-of-type{
+                animation: preloder-one 2s infinite ease-in-out;
+                transform: scale(0);
+                @keyframes preloder-one{
+                    0%,100%{
+                        transform: scale(0);
+                    }
+                    50%{
+                        transform: scale(1);
+                    }
+                    
+                }
+            }
+            &:last-of-type{
+                animation: preloder-two 2s infinite ease-in-out;
+                transform: scale(0);
+                opacity: 0.1;
+                animation-delay: -1s;
+                @keyframes preloder-two{
+                    0%,100%{
+                        transform: scale(0);
+                    }
+                    50%{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+/* ===========
+preloder end
+============ */
+.navbar{
+    position: absolute;
+    box-shadow: 1px 1px 7px #e1e1e1;
+    .navbar-brand{
+        width: 90px;
+        height: 90px;
+        background: $brackgroundColor;
+        color: $co1;
+        font-family: $font;
+        font-weight: 600;
+        &:hover{
+            color: $co1;
+        }
+    }
+    .navbar-toggler{
+        position: absolute;
+        right: 35px;
+        top: 30px;
+        &:focus{
+            box-shadow: none;
+        }
+        span{
+            width: 30px;
+            height: 4px;
+            display: block;
+            background: #000;
+            &:nth-child(2){
+                margin: 5px 0;
+            }
+        }
+    }
+    .offcanvas{
+        width: auto;
+        top: 90px !important;
+        box-shadow: 1px 1px 7px #e1e1e1;
+        border-right: none !important;
+        .nav{
+            width: 90px;
+            padding: 39px 0px;
+            height: 100vh;
+            flex-wrap: nowrap;
+
+        }
+        .nav button{
+            width: 100%;
+            padding: 15px 5px !important;
+            text-transform: capitalize;
+            color: $co2 !important;
+            background: $co1;
+            border-top: 1px solid #e3e3bf;
+            border-bottom: 1px solid #e3e3bf;
+            border-right: 4px  solid $co1;
+            border-radius: 0;
+            &:hover{
+                color: $brackgroundColor !important;
+            }
+            
+            span{
+                display: block;
+                font-size: 14px;
+                font-family: $font2;
+               
+            }
+        }
+        .active{
+            border-right: 4px solid $brackgroundColor !important;
+            span{
+                color: $brackgroundColor !important;
+            }
+        }
+    }
+    .offcanvas-backdrop.show{
+        opacity: 0;
+    }
+    
+}
+/* ============
+header-section end 
+================*/
+.tab-content{
+    padding-left: 90px !important;
+}
+#home{
+    .home-text{
+        padding-top: 140px;
+        padding-left: 40px;
+        h1{
+            font-size: 70px;
+            font-family: $font;
+            font-weight: 600;
+            span{
+                color: $brackgroundColor;
+            }
+        }
+        p{
+            font-size: 16px;
+            font-family: $font2;
+            color: $co2;
+            margin:20px 0px !important;
+            font-weight: 400;  
+            
+        }
+        a{
+            background: $brackgroundColor;
+            font-family: $font2;
+            color: $co1;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #39b6ff;
+                opacity: 0.6;
+                z-index: -1;
+                top: 0;
+                left: -100%;
+                @include trans(0.4s);
+
+            }
+            &:hover{
+                &::before{
+                    left: 0;
+                }
+            }
+        }
+
+    }
+    .home-imges{
+        position: relative;
+        margin: 0 auto;
+         margin-bottom: 0px;
+        background-color: $brackgroundColor;
+        border-radius: 50%;
+        top: 150px;
+        margin-bottom: -80px;
+        img{
+            width: 100%;
+            position: relative;
+            top: -100px;
+        }
+    }
+   .shape-square{       
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: #4E8CB1;
+    top: 8%;
+    right: 5%;
+    opacity: 0.6;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    transition: all .0s ease-in-out;
+    animation: rotating 20s linear infinite;
+    @keyframes rotating {
+        form{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+   }
+   .shape-triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 12%;
+    left: 45%;
+    opacity: .6;
+    transform: rotate(-60deg);
+    transition: all .0s;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid $brackgroundColor;
+    animation: right-to-left 20s linear infinite;
+    @keyframes right-to-left{
+        0% { 
+            margin-left: 0;
+        }
+        50%{ margin-left : -100px;}
+        100%{ margin-left: 0;}
+    }
+
+   }
+    
+}

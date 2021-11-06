@@ -87,6 +87,7 @@ preloder end
 .navbar{
     position: absolute;
     box-shadow: 1px 1px 7px #e1e1e1;
+    z-index: 9999;
     .navbar-brand{
         width: 90px;
         height: 90px;
@@ -99,7 +100,7 @@ preloder end
         }
     }
     .navbar-toggler{
-        position: absolute;
+        position: relative;
         right: 35px;
         top: 30px;
         &:focus{
@@ -165,6 +166,7 @@ header-section end
 ================*/
 .tab-content{
     padding-left: 90px !important;
+
 }
 #home{
     .home-text{
@@ -272,4 +274,99 @@ header-section end
 
    }
     
+}
+/* ============
+ Home section end 
+=============== */
+#about{
+    .container{
+        position: relative;
+        z-index: 1;
+        background: #fff;
+        &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 6px;
+                z-index: -1;
+                transition: all 0s;
+                background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2N8+vTpfwYGBgZpaWlGEI0LMBKtEJ8pyHJ4rRtVCAAd/QgLwKUsAgAAAABJRU5ErkJggg==)!important;
+                background-position: 0 0px!important;
+                background-repeat: repeat!important;
+                background-size: 15px;
+                width: 150px;
+                height: 150px;
+                transform: rotate(45deg);
+        }
+        .feature-item{
+            padding: 30px 25px !important;
+            box-shadow: 0px 0px 8px 1px rgba(145, 140, 145, 0.35);
+            background: $co1;
+            border-radius: 10px;
+            @include trans(0.4s);
+            &:hover{
+                background: $brackgroundColor;
+                color: #fff !important;
+                p{
+                    color: #fff;
+                }
+            }
+            .icon{
+                i{
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    background: $brackgroundColor;
+                    border-radius: 50%;
+                    line-height: 50px;
+                    color: $co1;
+                   
+                }
+            }
+            h3{
+                font-family: $font;
+                font-size: 25px;
+                line-height: 80px;
+                font-weight: 500;
+            }
+            p{
+                font-family: $font2;
+                color: $co2;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .icon-tow{
+                a{
+                    color: $co2 !important;
+                }
+                
+            }
+        }
+        .heading-area{
+            padding-top: 140px;
+            padding-left: 55px !important;
+            h4{
+                font-family: $font;
+                font-size: 16px;
+                font-weight: 500;
+                color: $brackgroundColor
+            }
+            h3{
+                font-size: 50px;
+                font-family: $font;
+                color: #0c0a0a;
+                font-weight: 500;
+                margin-top: 15px !important;
+                margin-bottom: 20px !important;
+            }
+            p{
+                font-family: $font2;
+                color: $co2;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+    }
+  
 }

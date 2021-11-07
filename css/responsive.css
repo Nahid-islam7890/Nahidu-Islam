@@ -1,10 +1,6 @@
 @media (max-width:991px){
-    html, body {
-        height: 100%;
-        overflow: scroll;
-      }
     .navbar{
-        position: static;
+        position: sticky;
     }
     .navbar .navbar-brand {
         width: 80px;
@@ -44,5 +40,28 @@
     #home .home-text h1 {
         font-size: 48px;
     }
-    
+    #about{
+        overflow: scroll;
+        height: 100vh;
+    }
+    #about .container .heading-area {
+        padding-top: 51px !important;
+        padding-left: 0px !important;
+    }
+    #about .container .heading-area h3 {
+        font-size: 41px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #about .container .heading-area h3 {
+        font-size: 36px;
+    }
+}
+@media (max-width:576px){
+    #home .home-text h1 {
+        font-size: 45px;
+    }
+    #about .container .heading-area h3 {
+        font-size: 36px;
+    }
 }

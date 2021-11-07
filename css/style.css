@@ -6,11 +6,6 @@ common css start
   padding: 0px;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 ul {
   list-style: none;
 }
@@ -21,6 +16,11 @@ a {
 
 img {
   vertical-align: middle;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* =========
